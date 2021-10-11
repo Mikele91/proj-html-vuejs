@@ -12,5 +12,16 @@ body{
     font-family: 'Cormorant Garamond', serif;
     a{
         text-decoration: none;
-    }
-}
+        color:$marino;
+        margin: .9375rem;
+        
+    };
+    button{
+        background-color: $jungle;
+        border-radius: .25rem;
+        color: white;
+        padding: .5rem 2.5rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+    };
+};

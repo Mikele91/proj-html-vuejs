@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :infoNav="linkNav"/>
     <Main/>
     <Footer/>
   </div>
@@ -19,7 +19,12 @@ export default {
     Main,
     Footer,
     Header,
-
+  },
+  data(){
+    return{
+      linkNav:["Home", "Pages", "Courses", "Features", "Blog", "Shop"
+      ]
+    }
   }
 }
 </script>
