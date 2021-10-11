@@ -1,0 +1,16 @@
+// import bootstrap 
+@import '~bootstrap/scss/bootstrap'; 
+// import variables 
+@import './variables.scss';
+
+// import fontaswer
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css');
+// import google fonts 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Cormorant Garamond', serif;
+    a{
+        text-decoration: none;
+    }
+}
