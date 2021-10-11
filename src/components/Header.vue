@@ -64,6 +64,7 @@ export default {
 <style scoped lang="scss">
 @import '../assets/style/variables.scss';
 header{
+    position: relative;
     background-color: $amoru;
     background-image: $backMain;
     .header_top{
@@ -99,6 +100,10 @@ header{
         };
     };
     .shop{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50% );
         background-color: white;
         a{
             color: black;
