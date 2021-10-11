@@ -76,7 +76,7 @@ header{
         img{
             width: 12.5rem;
         };
-    };
+    }
     .header_bottom{
         .col-4{
             h4{
@@ -95,15 +95,15 @@ header{
             
             img{
                 height: 400px
-            };
+            }
+        }
         };
-        };
-    };
+    }
     .shop{
         position: absolute;
         top: 50%;
         right: 0;
-        transform: translateY(-50% );
+        transform: translateY(-70% );
         background-color: white;
         a{
             color: black;
