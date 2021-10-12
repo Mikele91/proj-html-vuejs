@@ -5,7 +5,7 @@
             <div class="col-3">
                 <h2>How To Be an Alpha Male: THe 15 Habits of True Alphas</h2>
             </div>
-            <div class="col-9  ">
+            <div class="col-8  ">
                 <div class="description">
                     <h4>Want to learn how to be <span>alpha male?</span> How to be more mascukune?</h4>
                     <h4>How to be the man you've always wanted to be ?</h4>
@@ -55,6 +55,10 @@ section{
     }
     .description{
         margin-left: 200px;
+        p{
+
+            color:$grey
+        }
     }
     .description h4{
         font-size:15px;

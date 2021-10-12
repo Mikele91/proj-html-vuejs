@@ -1,5 +1,6 @@
 <template>
 <main>
+    <!-- sezione con container del main  -->
     <div class="main_top container my-5">
     <section class="price">
         <div class="row">
@@ -44,6 +45,11 @@
 
     </section>
     <MainVideo/>
+    <Courses/>
+
+    </div>
+
+    <div class="main_bottom">
 
     </div>
 </main>
@@ -52,11 +58,14 @@
 
 <script>
 import MainVideo from './MainVideo.vue'
+import Courses from './Courses.vue'
+
 
 export default {
     name:"Main",
     components:{
         MainVideo,
+        Courses,
     }
 
 }
@@ -79,6 +88,10 @@ main{
                 font-weight: 700;
                 color:$jungle
             }
+    // .main_bottom{
+    //     height: 50px;
+    //     background-color: red;
+    // }
 }
 
 </style>
