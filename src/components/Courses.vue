@@ -26,8 +26,9 @@
                         <div class="text container">
                         <div class="price"> $30.00</div>
                         <p>How to be Successful: create a Growt Mindset For Success</p>
-                        <div class="icons">
-
+                       <div class="icons">
+                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
+                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
                         </div>
                             
                         </div>
@@ -38,42 +39,46 @@
                         <div class="price"> $30.00</div>
                         <p>How to be Successful: create a Growt Mindset For Success</p>
                         <div class="icons">
-
+                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
+                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
                         </div>
                             
                         </div>
                     </div>
                     
 
-                      <div class="col-4 ">
+                      <div class="col-4 my-5">
                         <img src="../assets/images/motivation-course-03-480x298.jpg" alt="">
                         <div class="text container">
                         <div class="price"> $30.00</div>
                         <p>How to be Successful: create a Growt Mindset For Success</p>
                         <div class="icons">
-
+                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
+                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
                         </div>
                             
                         </div>
                     </div>
-                      <div class="col-4">
+                      <div class="col-4 my-5">
                         <img src="../assets/images/motivation-course-02-480x298.jpg" alt="">
                         <div class="text container">
                         <div class="price"> $30.00</div>
                         <p>How to be Successful: create a Growt Mindset For Success</p>
                         <div class="icons">
-
+                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
+                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
                         </div>
                             
                         </div>
                     </div>
-                      <div class="col-4 ">
+                      <div class="col-4 my-5 ">
                         <img src="../assets/images/motivation-course-01-480x298.jpg" alt="">
                         <div class="text container">
                         <div class="price"> $30.00</div>
                         <p>How to be Successful: create a Growt Mindset For Success</p>
                         <div class="icons">
-
+                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
+                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
                         </div>
                             
                         </div>
@@ -113,6 +118,11 @@ name:"Courses"
    }
    main{
        .col-4{
+            transition: transform .2s;
+           &:hover{
+               box-shadow: 0 10px rgba(128, 128, 128, 0.062) ;
+                transform: scale(1.1)
+           }
            p{
                color: $marino;
                font-weight: 700;

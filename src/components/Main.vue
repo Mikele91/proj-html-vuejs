@@ -46,6 +46,7 @@
     </section>
     <MainVideo/>
     <Courses/>
+    <Book/>
 
     </div>
 
@@ -59,6 +60,8 @@
 <script>
 import MainVideo from './MainVideo.vue'
 import Courses from './Courses.vue'
+import Book from './Book.vue'
+
 
 
 export default {
@@ -66,6 +69,7 @@ export default {
     components:{
         MainVideo,
         Courses,
+        Book,
     }
 
 }
