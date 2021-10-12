@@ -50,7 +50,10 @@
 
     </div>
 
-    <div class="main_bottom">
+    <div class="main_full">
+        <Carosel/>
+    </div>
+    <div class="main_bottom container my-5">
 
     </div>
 </main>
@@ -61,6 +64,7 @@
 import MainVideo from './MainVideo.vue'
 import Courses from './Courses.vue'
 import Book from './Book.vue'
+import Carosel from './Carosel.vue'
 
 
 
@@ -70,6 +74,7 @@ export default {
         MainVideo,
         Courses,
         Book,
+        Carosel,
     }
 
 }
