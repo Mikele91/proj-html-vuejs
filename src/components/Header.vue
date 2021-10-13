@@ -9,13 +9,10 @@
                 </nav>
 
                 </div>
-                <div class="icons ">
-                    <a href="#"> <i class="fab fa-twitter"></i></a>
-                    <a href="#"> <i class="fab fa-facebook-f"></i></a>
-                    <a href="#"> <i class="fab fa-instagram"></i></a>
-                    <a href="#"> <i class="fab fa-linkedin"></i></a>
-                    
-                    
+                <div  class="icons d-flex "> 
+                <div v-for ="(log, i) in infoMed" :key="i">
+                    <a href="#"> <i :class= "`fab ${log}`"></i></a>                  
+                </div>
                 </div>
 
 
@@ -44,10 +41,12 @@
                 </div>
         </div>
         <div class="shop d-flex flex-column">
-            <a href="#"><i class="far fa-caret-square-right"></i> </a>
-            <a href="#"><i class="far fa-life-ring"></i></a>
+            <div v-for="(icon, ind) in infoShop" :key="ind">
+            <a href="#"><i :class="`far ${icon}`"></i> </a>
+            </div>
+            <!-- <a href="#"><i class="far fa-life-ring"></i></a>
             <a href="#"><i class="fas fa-book"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a> -->
         </div>
     </header>
 </template>
@@ -56,7 +55,9 @@
 export default {
     name:"Header",
     props:{
-        infoNav:Array
+        infoNav:Array,
+        infoMed:Array,
+        infoShop:Array,
     }
 }
 </script>
@@ -100,13 +101,18 @@ header{
         };
     }
     .shop{
+        align-items: center;
         position: absolute;
         top: 50%;
         right: 0;
         transform: translateY(-70% );
         background-color: white;
         a{
+          
             color: black;
+            i{
+                padding: 12px 0;
+            }
         } 
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header :infoNav="linkNav"/>
+    <Header :infoNav="linkNav" :infoMed="media" :infoShop="shop"/>
     <Main/>
     <Footer/>
   </div>
@@ -22,8 +22,9 @@ export default {
   },
   data(){
     return{
-      linkNav:["Home", "Pages", "Courses", "Features", "Blog", "Shop"
-      ]
+      linkNav:["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
+      media:["fa-twitter", "fa-facebook-f", "fa-instagram", "fa-linkedin"],
+      shop:["far fa-caret-square-right", " far fa-life-ring"," fas fa-book","fas fa-shopping-cart"],
     }
   }
 }

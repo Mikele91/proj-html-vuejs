@@ -1,6 +1,6 @@
 <template>
     <footer>
-
+            
     </footer>
 </template>
 
@@ -14,5 +14,8 @@ export default {
 
 <style scoped lang="scss">
 @import '../assets/style/variables.scss';
-
+footer{
+    background-color: rgb(23, 22, 33);
+    height: 200px;
+}
 </style>
