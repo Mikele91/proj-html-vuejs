@@ -2,7 +2,7 @@
   <div id="app">
     <Header :infoNav="linkNav" :infoMed="media" :infoShop="shop"/>
     <Main/>
-    <Footer/>
+    <Footer :infoMed="media"/>
   </div>
 </template>
 

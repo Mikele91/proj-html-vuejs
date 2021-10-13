@@ -7,7 +7,6 @@
                 <nav v-for ="(link, index) in infoNav" :key="index" class="d-flex "> 
                     <a href="#"> {{link}}  <i class="fas fa-chevron-down"></i> </a>
                 </nav>
-
                 </div>
                 <div  class="icons d-flex "> 
                 <div v-for ="(log, i) in infoMed" :key="i">

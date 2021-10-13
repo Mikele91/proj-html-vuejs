@@ -42,12 +42,6 @@
         <img src="../assets/images/client-logo-05-primary.png" alt="">
         <img src="../assets/images/client-logo-06-primary.png" alt="">
         <img src="../assets/images/client-logo-07-primary.png" alt="">
-
-
-
-
-
-
       </div>
   </section>
 </template>
