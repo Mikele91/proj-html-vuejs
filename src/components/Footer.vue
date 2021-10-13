@@ -12,55 +12,28 @@
                 </div>
                 </div>
                 <div class="col-8 gx-5 ">
-                    <div class="row">
-                        <div class="section_left d-flex">
-                            <div class="colonna mx-5 text-center">
+                    <div class="row ">
+                        <div class="section_left d-flex ">
+                            <div v-for="(obj, index) in infoLinkFooter" :key="index" class="colonna mx-5 text-center">
 
-                            <h4>titolo1</h4>
-                            <div class="list d-flex ">
-                            <ul>
-                                <!-- <li> <strong>TItle1</strong> </li> -->
-                                
-                                <li>link1</li>
-                                <li>link1</li>
-                                <li>link1</li>
-
+                            <h4>{{obj.title}}</h4>
+                            <div class="list  ">
+                            <ul v-for="(link, i) in obj.link" :key="i">
+                             <li>{{link}}</li>
                             </ul>
                             
-                            <ul>
-                                <li>link1</li>
-                                <li>link1</li>
-                                <li>link1</li>
+                          
 
-                            </ul>
+                            </div>
+                            </div>
                         
-
-                            </div>
-                            </div>
-                            <div class="colonna mx-5 text-center">
-
-                            <p>titolo1</p>
-                            <div class="list d-flex ">
-                            <ul>
-                                <!-- <li> <strong>TItle1</strong> </li> -->
-                                
-                                <li>link1</li>
-                                <li>link1</li>
-                                <li>link1</li>
-
-                            </ul>
-                            
-                           
-                        
-
-                            </div>
-                            </div>
                         </div>
                     
                         
                     </div>
                 </div>
             </div>
+            <div class="cop text-center py-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
         </div>
     </footer>
 </template>
@@ -70,8 +43,8 @@ export default {
     name:"Footer",
     props:{
        infoMed:Array,
+       infoLinkFooter:Object,
     }
-
 }
 </script>
 
@@ -80,12 +53,11 @@ export default {
 footer{
     color: white;
     background-color:$darkBlue;
-    i{
-        color:$grey;
-    }
-    li{
+   
+    li, .address, i{
         margin-top: .625rem;
         list-style: none ;
+        color:$grey;
     }
     .section_left{
         padding-left:12.5rem;

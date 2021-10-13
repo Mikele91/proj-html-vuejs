@@ -2,7 +2,7 @@
   <div id="app">
     <Header :infoNav="linkNav" :infoMed="media" :infoShop="shop"/>
     <Main/>
-    <Footer :infoMed="media"/>
+    <Footer :infoMed="media" :infoLinkFooter="footerLink"/>
   </div>
 </template>
 
@@ -25,6 +25,19 @@ export default {
       linkNav:["Home", "Pages", "Courses", "Features", "Blog", "Shop"],
       media:["fa-twitter", "fa-facebook-f", "fa-instagram", "fa-linkedin"],
       shop:["far fa-caret-square-right", " far fa-life-ring"," fas fa-book","fas fa-shopping-cart"],
+      footerLink:[
+        {
+          title:"Titolo-1",
+          link:["link1", "link2", "link3"]
+        },
+          {
+          title:"Titolo-2",
+          link:["link1", "link2", "link3"]
+
+        }
+
+      ],
+      
     }
   }
 }
