@@ -51,7 +51,7 @@
     </div>
 
     <div class="main_full">
-        <Carosel/>
+        <Carosel :infoCarosel="infoCarosel"/>
     </div>
     <div class="main_bottom container my-5">
         <Blog/>
@@ -81,7 +81,8 @@ export default {
         Blog,
     },
     props:{
-        infoCourses:Array
+        infoCourses:Array,
+        infoCarosel:Array,
     }
     
 

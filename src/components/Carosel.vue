@@ -1,20 +1,21 @@
 <template>
     <section >
         <div class="circle ">
-            <i class="fas fa-sort-up"></i>
-            <div class="numb my-2">1/4</div>
-            <i class="fas fa-sort-down"></i>
+            <i @click=" nextPg()" class="fas fa-sort-up"></i>
+            <div class="numb my-2">{{visibitily+1}}/4</div>
+            <i @click="prevPg()" class="fas fa-sort-down"></i>
         </div>
     <div class="row">
-    <div class="col-6 sez_1 text-center">
-        <h5 class="my-5">REAL STORIES</h5>
+    <div  v-show="visibitily==index"  v-for="(info, index) in infoCarosel" :key="index" class="col-6 sez_1 text-center">
+        <h5 class="my-5">{{info.title}}</h5>
         <div class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa magnam laborum vitae nesciunt id labore dicta sed soluta cumque iusto laboriosam hic quas, sit minus voluptatum debitis a necessitatibus voluptatibus!
+           {{info.text}}
         </div>
-        <img src="../assets/images/testimonial-avata-02.jpg" alt="">
-        <p>Mina Hollace</p>
-        <p>/Freelabcer</p>
+        <img :src="info.img" alt="">
+        <p>{{info.pg}}</p>
+        <p>{{info.job}}</p>
     </div>
+
 
     <div class="col-6 img">
     </div>
@@ -25,8 +26,39 @@
 
 <script>
 export default {
-name:"Carosel"
+name:"Carosel",
+props:{
+    infoCarosel:Array,
+},
+data(){
+    return{
+        visibitily: 0,
+    }
+},
+methods:{
+
+    show: function(){
+
+    },
+        nextPg: function(){
+
+            this.visibitily++;
+            if( this.visibitily >= this.infoCarosel.length){
+                this.visibitily = 0;
+            }
+},
+prevPg: function(){
+            this.visibitily--;
+            if(this.visibitily == -1){
+                this.visibitily = this.infoCarosel.length-1;
+            }
+
+        },
+
+    },
+    
 }
+
 </script>
 
 <style scoped lang="scss">

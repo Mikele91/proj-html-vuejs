@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header :infoNav="linkNav" :infoMed="media" :infoShop="shop"/>
-    <Main :infoCourses="courses"/>
+    <Main :infoCourses="courses" :infoCarosel="carosel"/>
     <Footer :infoMed="media" :infoLinkFooter="footerLink"/>
   </div>
 </template>
@@ -39,6 +39,38 @@ export default {
       ],
       // common header-footer
 
+        //Carosel
+        carosel:[
+          {
+            title:"REAL STORIES",
+            text: "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me",
+            img: require('./assets/images/testimonial-avata-01.jpg'),
+            pg:"Florence Themes",
+            job:"/Multimedia Admin"
+          },
+          {
+            title:"REAL STORIES",
+            text: "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me",
+            img: require('./assets/images/testimonial-avata-02.jpg'),
+            pg:"Mina Hollace",
+            job:"/Freelancer"
+          },
+          {
+            title:"REAL STORIES",
+            text: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students",
+            img: require('./assets/images/testimonial-avata-03.jpg'),
+            pg:"Tony Stark",
+            job:"/Private Tutor"
+          },
+          {
+            title:"REAL STORIES",
+            text: "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me",
+            img: require('./assets/images/testimonial-avata-03.jpg'),
+            pg:"Madley Pondor",
+            job:"/IT Specialist",
+          }
+          ,
+        ],
 
       // sezione COURSES 
       courses:[
