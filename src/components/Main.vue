@@ -45,7 +45,7 @@
 
     </section>
     <MainVideo/>
-    <Courses/>
+    <Courses :infoCourses="infoCourses"/>
     <Book/>
 
     </div>
@@ -79,7 +79,11 @@ export default {
         Book,
         Carosel,
         Blog,
+    },
+    props:{
+        infoCourses:Array
     }
+    
 
 }
 </script>

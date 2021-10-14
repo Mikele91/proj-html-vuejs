@@ -5,85 +5,25 @@
                 <h2 class="mb-5"> Lastes <span>Online Courses</span></h2>
             </header>
             <main>
-                <div class="row">
-                    <div class="col-4 ">
-                        <img src="../assets/images/motivation-course-06-480x298.jpg" alt="">
-                        <div class="text container">
-                        <div class="price"> $30.00</div>
-                        <p>How to be Successful: create a Growt Mindset For Success</p>
-                        <div class="icons">
-                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
-                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
-                        </div>
-                            
-                        </div>
-                    </div>
-                      <div class="col-4">
-                          <div class="container">
-                              
-                          </div>
-                        <img src="../assets/images/motivation-course-05-480x298.jpg" alt="">
-                        <div class="text container">
-                        <div class="price"> $30.00</div>
-                        <p>How to be Successful: create a Growt Mindset For Success</p>
-                       <div class="icons">
-                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
-                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
-                        </div>
-                            
-                        </div>
-                    </div>
-                      <div class="col-4 ">
-                        <img src="../assets/images/motivation-course-04-480x298.jpg" alt="">
-                        <div class="text container">
-                        <div class="price"> $30.00</div>
-                        <p>How to be Successful: create a Growt Mindset For Success</p>
-                        <div class="icons">
-                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
-                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
-                        </div>
-                            
-                        </div>
-                    </div>
-                    
 
-                      <div class="col-4 my-5">
-                        <img src="../assets/images/motivation-course-03-480x298.jpg" alt="">
+
+                <!-- sezione card  -->
+                <div class="row">
+                    <!-- prima riga  -->
+                    <div v-for="(info, index) in infoCourses" :key="index" class="col-4 my-5">
+                        <img :src="info.imge" alt="">
                         <div class="text container">
-                        <div class="price"> $30.00</div>
-                        <p>How to be Successful: create a Growt Mindset For Success</p>
-                        <div class="icons">
-                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
-                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
-                        </div>
-                            
-                        </div>
-                    </div>
-                      <div class="col-4 my-5">
-                        <img src="../assets/images/motivation-course-02-480x298.jpg" alt="">
-                        <div class="text container">
-                        <div class="price"> $30.00</div>
-                        <p>How to be Successful: create a Growt Mindset For Success</p>
-                        <div class="icons">
-                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
-                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
-                        </div>
-                            
-                        </div>
-                    </div>
-                      <div class="col-4 my-5 ">
-                        <img src="../assets/images/motivation-course-01-480x298.jpg" alt="">
-                        <div class="text container">
-                        <div class="price"> $30.00</div>
-                        <p>How to be Successful: create a Growt Mindset For Success</p>
-                        <div class="icons">
-                            <i class="fas fa-book  my-5"></i> <span class="mx-2"> 3 Lessons</span>
-                            <i class="far fa-user ms-5 "></i> <span class="mx-2"> 50 Students</span>
-                        </div>
-                            
+                            <div class="price"> {{info.price}}</div>
+                            <p>{{info.text}}</p>
+                            <span v-for="(icon, i) in info.icons" :key="i" class="icons">
+                                <i :class="icon"></i> <span class="m-3"> {{icon.text}}</span>
+                            </span>  
                         </div>
                     </div>
                 </div>
+
+
+                    <!-- SEZIONE LINK  -->
                 <div class="row">
                     <div class="col-12 text-center">
                         <button class="my-5">
@@ -97,52 +37,55 @@
 
 <script>
 export default {
-name:"Courses"
+name:"Courses",
+props:{
+    infoCourses:Array
+}
 }
 </script>
 
 <style scoped lang="scss">
 @import '../assets/style/variables.scss';
- section{
-   header{
-       h5{
-           color:$grey;
-           font-size: 1rem;
-       }
-       h2{
-           font-size: 3rem;
-           span{
-               color:$jungle
-           }
-       }
-   }
-   main{
-       .col-4{
-            transition: transform .2s;
-           &:hover{
-               box-shadow: 0 10px rgba(128, 128, 128, 0.062) ;
-                transform: scale(1.1)
-           }
-           p{
-               color: $marino;
-               font-weight: 700;
-           }
-           .icons{
-               color:$grey
-           }
+section{
+header{
+    h5{
+        color:$grey;
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 3rem;
+        span{
+            color:$jungle
+        }
+    }
+}
+main{
+    .col-4{
+        transition: .5s;
+        &:hover{
+            box-shadow: 0 10px rgba(128, 128, 128, 0.062) ;
+            transform: scale(1.1)
+        }
+        p{
+            color: $marino;
+            font-weight: 700;
+        }
+        .icons{
+            color:$grey
+        }
 
-       }
-       img{
-           margin:0, 1rem;
-           width: 25rem;
-           border-radius: .3125rem;
-       }
-       .price{
-           color:$jungle;
-           font-weight: 700;
-           font-size: 1.5rem;
-           margin: 1rem 0;
-       }
-   }
- }
+    }
+    img{
+        margin:0, 1rem;
+        width: 25rem;
+        border-radius: .3125rem;
+    }
+    .price{
+        color:$jungle;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+}
+}
 </style>
